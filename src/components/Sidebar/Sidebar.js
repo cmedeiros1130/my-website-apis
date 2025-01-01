@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
+import { SidebarData } from "./SidebarData";
+import Submenu from "./Submenu";
+import { IconContext } from "react-icons";
 
 const Nav = styled.div`
   background: #15171c;
@@ -46,18 +49,23 @@ const Sidebar = () => {
 
   return (
     <>
-      <Nav>
-        <NavIcon to="#" onClick={showSidebar}>
-          <FaBars />
-        </NavIcon>
-      </Nav>
-      <SidebarNav sidebar={sidebar}>
-        <SidebarWrap>
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <Nav>
           <NavIcon to="#" onClick={showSidebar}>
-            <AiIcons.AiOutlineClose />
+            <FaBars />
           </NavIcon>
-        </SidebarWrap>
-      </SidebarNav>
+        </Nav>
+        <SidebarNav sidebar={sidebar}>
+          <SidebarWrap>
+            <NavIcon to="#" onClick={showSidebar}>
+              <AiIcons.AiOutlineClose />
+            </NavIcon>
+            {SidebarData.map((item, index) => {
+              return <Submenu item={item} key={index} />;
+            })}
+          </SidebarWrap>
+        </SidebarNav>
+      </IconContext.Provider>
     </>
   );
 };

@@ -1,85 +1,85 @@
 import React from "react";
-import * as FaIcons from "react-icons";
-import * as AiIcons from "react-icons";
-import * as IoIcons from "react-icons";
-import * as RiIcons from "react-icons";
+import { AiFillHome } from "react-icons/ai";
+import { IoMdHelpCircle } from "react-icons/io";
+import { FaEnvelopeOpenText } from "react-icons/fa";
+import { RiArrowDownSFill, RiArrowUpFill } from "react-icons/ri";
 
 export const SidebarData = [
   {
     title: "Overview",
     path: "/overview",
-    icon: <AiIcons.AiFillHome />,
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpFill />,
+    icon: <AiFillHome />,
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpFill />,
     subNav: [
       {
         title: "Users",
         path: "/overview/users",
-        icon: <AiIcons.IoIoPaper />,
+        icon: <IoMdHelpCircle />,
       },
       {
         title: "Revenue",
         path: "/overview/revenue",
-        icon: <AiIcons.IoIoPaper />,
+        icon: <IoMdHelpCircle />,
       },
     ],
   },
   {
     title: "Reports",
     path: "/reports",
-    icon: <AiIcons.AiFillHome />,
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpFill />,
+    icon: <AiFillHome />,
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpFill />,
     subNav: [
       {
         title: "Overview",
         path: "/reports/reports1",
-        icon: <AiIcons.IoIoPaper />,
+        icon: <IoMdHelpCircle />,
       },
       {
         title: "Report's 2",
         path: "/reports/reports2",
-        icon: <AiIcons.IoIoPaper />,
+        icon: <IoMdHelpCircle />,
       },
       {
         title: "Report's 3",
         path: "/reports/reports3",
-        icon: <AiIcons.IoIoPaper />,
+        icon: <IoMdHelpCircle />,
       },
     ],
   },
   {
     title: "Products",
     path: "/products",
-    icon: <AiIcons.IoIoPaper />,
+    icon: <IoMdHelpCircle />,
   },
   {
     title: "Team",
     path: "/team",
-    icon: <AiIcons.IoIoPaper />,
+    icon: <IoMdHelpCircle />,
   },
   {
     title: "Messages",
     path: "/messages",
-    icon: <AiIcons.FaEnvelopeOpenText />,
-    iconClosed: <RiIcons.RiArrowDownSFill />,
-    iconOpened: <RiIcons.RiArrowUpFill />,
+    icon: <FaEnvelopeOpenText />,
+    iconClosed: <RiArrowDownSFill />,
+    iconOpened: <RiArrowUpFill />,
     subNav: [
       {
         title: "Message 1",
         path: "/messages/message1",
-        icon: <AiIcons.IoIoPaper />,
+        icon: <IoMdHelpCircle />,
       },
       {
         title: "Message 2",
         path: "/messages/message2",
-        icon: <AiIcons.IoIoPaper />,
+        icon: <IoMdHelpCircle />,
       },
     ],
   },
   {
     title: "Support",
     path: "/support",
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <IoMdHelpCircle />,
   },
 ];
